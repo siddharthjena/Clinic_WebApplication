@@ -1,0 +1,83 @@
+<!doctype html>
+{% extends 'ClinicApp/base.html' %}
+{% load static %}
+{% block body_block %}
+<div>
+  <div class="">
+    <div class="row">
+      <div class="col-8">
+        <div id="carouselExample" class="carousel slide" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'images/homeBG1.jpeg' %}" class="d-block w-100 h-45" alt="..." height="500px">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/clinicBG2.jpg' %}" class="d-block w-100 h-45" alt="..." height="500px" >
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-4" style="padding-left:0ch; ">
+        <div style="padding-top: 40px;">
+          <div style="font-size: 110px;font-family:'Times New Roman', Times, serif;">
+            <b>Angel<br>
+              Health Care</b>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+     
+</div>
+<div style="height: 60px;background-color: rgb(15, 33, 56); text-align: center; color: WHITE;">
+        <h1>OUR SPECIALISTS</h1>
+</div>
+<div style="padding-top: 30px;padding-left: 50px;padding-bottom: 20px;background-color: rgb(169, 212, 212);">
+  <div class="  text-center">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 20rem; height: 28rem;">
+          <img src="{% static 'images/doctor2.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><h4>Dr. Sourav Ku Bal </h4> <B>(Consultant Medecine)</B></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem;height: 28rem;">
+          <img src="{% static 'images/doctor1.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><h4>Dr. Rajendra Prasad </h4><b>(Consultant Medecine)</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem;height: 28rem;">
+          <img src="{% static 'images/doctor3.jpg' %}" class="card-img-top" alt="..." height="330px">
+          <div class="card-body">
+            <p class="card-text"><h4>Dr. Sarojini Jena </h4><b>(gynecologist)</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem;height: 28rem;">
+          <img src="{% static 'images/doctor4.webp' %}" class="card-img-top" alt="..." height="330px">
+          <div class="card-body">
+            <p class="card-text"><h4>Dr. Tripti Das </h4><b>(Consultant Dentist)</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

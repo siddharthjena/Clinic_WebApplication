@@ -1,0 +1,73 @@
+{% extends 'ClinicApp/base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+
+
+
+<div class="">
+    <div class="row">
+      <div class="col-2">
+        <div>
+            <div class="sidebar" style="display: flexbox;background-color: rgb(67, 64, 64);padding-top: 30px;padding-bottom: 30px;height: 600px;">
+                <ul style="list-style-type: none;">
+                    <a href="{% url 'patient_dashboard' %}"><li><button class="btn" style="background-color: aliceblue;width: 200px;">Home</button></li></a>
+                    <a href="{% url 'book_appointment' %}"><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Book Appointments</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Personal details</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Doctors details</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">logout</button></li></a>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <div style="font-size: 100px; font-family: 'Times New Roman', Times, serif;">
+            Book your appointment
+        </div>
+        <div>
+            <form method="post" action="{% url 'book_appointment' %}">
+                {% csrf_token %}
+                <table class="table" style="width: 500px;height: 300px;">
+                    <tr>
+                        <td style="background-color: bisque;"><label for="doctor"><b>Select Doctor:</b></label></td>
+                        <td style="background-color: bisque;">
+                            <select id="doctor" name="doctor" required>
+                                {% for doctor in doc_details %}
+                                    <option value="{{ doctor.id }}">{{ doctor.name }} - {{ doctor.specialization }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: bisque;"><label for="date"><b>Date:</b></label></td>
+                        <td style="background-color: bisque;"><input type="date" id="date" name="date" required></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: bisque;"><label for="time"><b>Time:</b></label></td>
+                        <td style="background-color: bisque;">
+                            <select id="time" name="time" required>
+                                <option value="" selected disabled>Select Time</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="18:00">06:00 PM</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: bisque;">
+                            <!-- Hidden input for patient ID -->
+                            <input type="hidden" name="patient_id" value="{{ request.session.user_id }}">
+                            <button type="submit" class="btn" style="background-color: rgb(11, 26, 62);color: white;"><b>Book Appointment</b></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+      </div>
+       
+    
+
+{% endblock %}

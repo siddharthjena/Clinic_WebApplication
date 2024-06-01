@@ -1,0 +1,23 @@
+<!doctype html>
+{% extends 'ClinicApp/base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'images/login_page.jpg' %}" alt="" height="700px" width="1000px">
+      </div>
+      <div class="col" style="padding-top: 180px; padding-left: 200px;background-image: linear-gradient(90deg, white,rgb(83, 79, 79));">
+        
+        <div class="col">
+          <a href="{% url 'doc_reg' %}"><button class="btn" style="background-image: linear-gradient(90deg, rgb(222, 81, 172), rgb(222, 201, 201));width: 400px; height: 150px;color: rgb(0, 0, 0);font-size: 60px;border-radius: 30px;">Doctor</button></a>
+        </div>
+
+        <div class="col" style="padding-top: 50px;">
+          <a href="{% url 'patient_reg' %}"><button class="btn" style="background-image: linear-gradient(90deg, rgb(34, 67, 198), rgb(53, 54, 57));width: 400px; height: 150px;color: white;font-size: 60px;border-radius: 30px;">Patient</button></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

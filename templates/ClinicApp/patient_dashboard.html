@@ -1,0 +1,64 @@
+{% extends 'ClinicApp/base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+
+
+
+<div class="">
+    <div class="row">
+      <div class="col-2">
+        <div>
+            <div class="sidebar" style="display: flexbox;background-color: rgb(67, 64, 64);padding-top: 30px;padding-bottom: 30px;height: 600px;">
+                <ul style="list-style-type: none;">
+                    <a href="{% url 'patient_dashboard' %}"><li><button class="btn" style="background-color: aliceblue;width: 200px;">Home</button></li></a>
+                    <a href="{% url 'book_appointment' %}"><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Book Appointments</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Personal details</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">Doctors details</button></li></a>
+                    <a href=""><li style="padding-top: 30px;"><button class="btn" style="background-color: aliceblue;width: 200px;">logout</button></li></a>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <div style="font-size: 100px; font-family: 'Times New Roman', Times, serif;">
+            Hello {{patient.name}}
+        </div>
+        <div>
+
+           <div >
+            <h2>Your Appointments</h2>
+           </div> 
+           
+            <table class="table" style="padding-top: 20px;">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Patient Name</th>
+                        <th scope="col">Doctor Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in appointments %}
+                        <tr>
+                            <td style="background-color: bisque;">{{ forloop.counter }}</td>
+                            <td style="background-color: bisque;">{{ i.date }}</td>
+                            <td style="background-color: bisque;">{{ i.time }}</td>
+                            <td style="background-color: bisque;">{{ i.patient.name }}</td>
+                            <td style="background-color: bisque;">{{ i.doctor.name }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+              
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+{% endblock %}

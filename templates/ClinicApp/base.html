@@ -1,0 +1,86 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div >
+        <nav class="navbar " style="background-color: rgb(15, 33, 56);text-align: center;font-size: xx-large;color: white;">
+            <div class="container-fluid">
+                   <h2>Angel HealthCare</h2>
+              </div>
+              
+          </nav>
+    </div>
+  
+      <div>
+        <nav class="navbar navbar-expand-lg " class="navbar bg-primary"  style="background-color: rgb(242, 168, 94); color: white;">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About_us
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'home' %}">About HealthCare Centre</a></li>
+                      <li><a class="dropdown-item" href="{% url 'home' %}">Doctors</a></li>
+                    
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Contact_us
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  
+                
+              </div>
+              <div class="d-flex" style="padding-right: 40px;">
+                <a href="{%url 'login'%}"><button class="btn" style="background-color: rgb(32, 94, 230);width: 100px;font-size: x-large;color: white;">login</button></a>
+              </div>
+              <div class="d-flex" style="padding-right: 40px;">
+                <a href="{%url 'register'%}"><button class="btn" style="background-color: rgb(207, 236, 237);width: 100px;font-size: x-large;">register</button></a>
+              </div>
+            </div>
+          </nav>
+      </div>
+      {% block body_block %}  {% endblock %}
+      <div style="color: white;">
+        <div class="" style="background-color: rgb(15, 33, 56);">
+            
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                
+              </div>
+              <div class="col">
+                <h3>Contact Us</h3>
+                <p>123 Clinic Street, bhubaneswar, odisha,india</p>
+                <p>Email: angel@example.com</p>
+                <p>Phone: +91 993802610</p>
+              </div>
+              <div class="col">
+                
+              </div>
+            </div>
+          </div>
+
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+{% extends 'ClinicApp/base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="">
+  <div class="row">
+    <div class="col">
+      <img src="{% static 'images/login_page.jpg' %}" alt="" height="700px" width="1000px">
+    </div>
+    <div class="col" style="padding-top: 70px; padding-left: 130px;background-image: linear-gradient(90deg, rgb(255, 255, 255),rgb(59, 55, 55));">
+      <div class="card text-center" style="width: 550px; height: 550px;">
+          <div class="card-header" style="height: 60px; background-image: linear-gradient(90deg,rgb(44, 40, 40),rgb(61, 159, 189));color: white;">
+            <H3>Doctor's Registration </H3>
+          </div>
+          <div class="card-body text-center" style="background-image: linear-gradient(90deg,rgb(163, 221, 243),rgb(178, 209, 217));padding-top: 30px;" >
+                <form method="post" action="{% url 'doc_reg' %}">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td style="padding-top: 30px;padding-left: 60px"><label for="name"><b>Name:</b></label></td>
+                            <td style="padding-top: 30px;padding-left: 60px"><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr >
+                            <td style="padding-top: 30px;padding-left: 60px"><label for="specialization"><b>Specialization:</b></label></td>
+                            <td style="padding-top: 30px;padding-left: 60px"><input type="text" id="specialization" name="specialization"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 30px;padding-left: 60px"><label for="email"><b>Email:</b></label></td>
+                            <td style="padding-top: 30px;padding-left: 60px"><input type="email" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 30px;padding-left: 60px"><label for="password"><b>Password:</b></label></td>
+                            <td style="padding-top: 30px;padding-left: 60px"><input type="password" id="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 30px;padding-left: 60px"></td>
+                            <td style="padding-top: 30px;padding-left: 60px"><button type="submit" class="btn" style="background-color: rgb(56, 131, 163);color: white;"><b>Register</b></button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="card-footer text-body" style="height: 60px; background-image: linear-gradient(90deg,rgb(44, 40, 40),rgb(61, 159, 189));color: white;">
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
