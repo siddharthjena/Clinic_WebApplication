@@ -1,7 +1,5 @@
 # Healthcare Pro 
 
-Healthcare Pro  is a comprehensive healthcare management platform designed to streamline the processes for clinics and healthcare providers. It allows patients to manage their appointments, access their appointment history, and enables doctors to manage their schedules and patient interactions securely.
-
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
