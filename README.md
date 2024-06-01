@@ -1,6 +1,6 @@
-# Healthcare Pro W
+# Healthcare Pro 
 
-Healthcare Pro W is a comprehensive healthcare management platform designed to streamline the processes for clinics and healthcare providers. It allows patients to manage their appointments, access their appointment history, and enables doctors to manage their schedules and patient interactions securely.
+Healthcare Pro  is a comprehensive healthcare management platform designed to streamline the processes for clinics and healthcare providers. It allows patients to manage their appointments, access their appointment history, and enables doctors to manage their schedules and patient interactions securely.
 
 ## Table of Contents
 - [Description](#description)
@@ -28,7 +28,7 @@ Healthcare Pro W is designed and developed to provide a robust platform for heal
 - **Database Management:** Django ORM (Object Relational Mapper)
 
 ## Files and Folders
-- **HealthcarePro/:**
+- **ClinicProject/:**
   - `settings.py`: Contains project settings such as database configuration, installed apps, static files configuration, etc.
   - `urls.py`: Main URL configuration for the project, including routing to app-level URLs.
   
