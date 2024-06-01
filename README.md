@@ -9,10 +9,7 @@ Healthcare Pro W is a comprehensive healthcare management platform designed to s
 - [Files and Folders](#files-and-folders)
 - [Manual Testing](#manual-testing)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
+  
 ## Description
 Healthcare Pro W is designed and developed to provide a robust platform for healthcare management. It leverages Django, HTML5, CSS3 (Bootstrap), and MySQL to offer a seamless experience for users. The platform includes robust authentication features and secure data management, ensuring that sensitive information is protected.
 
