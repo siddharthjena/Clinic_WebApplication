@@ -5,7 +5,7 @@ class Patient(models.Model):
     contact_number = models.CharField(max_length=25)
     age = models.IntegerField()
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)  # Storing password as plain text for simplicity (not recommended in production)
+    password = models.CharField(max_length=100)  # Storing password as plain text for simplicity
 
     def __str__(self):
         return self.name
@@ -14,7 +14,7 @@ class Doctor(models.Model):
     name = models.CharField(max_length=100)
     specialization = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)  # Storing password as plain text for simplicity (not recommended in production)
+    password = models.CharField(max_length=100)  
 
     def __str__(self):
         return self.name
@@ -27,5 +27,5 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"Appointment with {self.doctor} on {self.date} at {self.time}"
-    # Add more fields as needed for appointment details
+   
 
