@@ -65,10 +65,10 @@ def login(request):
     return render(request, 'ClinicApp/login.html', {'error': 'Invalid email or password.'})
     
 def doctor_dashboard(request):
-        
-            doctor = Doctor.objects.get(id=request.session['user_id'])
-            appointments = Appointment.objects.filter(doctor=doctor)
-            return render(request, 'ClinicApp/doctor_dashboard.html', {'doctor': doctor, 'appointments': appointments})
+    if 'user_id' in request.session and request.session['user_type'] == 'doctor':
+        doctor = Doctor.objects.get(id=request.session['user_id'])
+        appointments = Appointment.objects.filter(doctor=doctor)
+        return render(request, 'ClinicApp/doctor_dashboard.html', {'doctor': doctor, 'appointments': appointments})
        
 
 
